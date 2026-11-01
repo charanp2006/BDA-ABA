@@ -1,0 +1,72 @@
+services:
+  namenode:
+    image: bde2020/hadoop-namenode:2.0.0-hadoop2.7.4-java8
+    container_name: campus-namenode
+    restart: unless-stopped
+    ports:
+      - "50070:50070"
+      - "8020:8020"
+    volumes:
+      - namenode:/hadoop/dfs/name
+      - ../data:/workspace-data:ro
+    environment:
+      - CLUSTER_NAME=campus-attendance
+    env_file:
+      - hadoop.env
+
+  datanode:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop2.7.4-java8
+    container_name: campus-datanode
+    restart: unless-stopped
+    volumes:
+      - datanode:/hadoop/dfs/data
+    environment:
+      - SERVICE_PRECONDITION=namenode:50070
+    env_file:
+      - hadoop.env
+
+  hive-metastore-postgresql:
+    image: bde2020/hive-metastore-postgresql:2.3.0
+    container_name: campus-hive-postgres
+    restart: unless-stopped
+
+  hive-metastore:
+    image: bde2020/hive:2.3.2-postgresql-metastore
+    container_name: campus-hive-metastore
+    restart: unless-stopped
+    env_file:
+      - hadoop.env
+    environment:
+      - HIVE_CORE_CONF_javax_jdo_option_ConnectionURL=jdbc:postgresql://hive-metastore-postgresql/metastore
+      - SERVICE_PRECONDITION=namenode:50070 datanode:50075 hive-metastore-postgresql:5432
+    command: /opt/hive/bin/hive --service metastore
+    volumes:
+      - ./hive-site.xml:/opt/hive/conf/hive-site.xml:ro
+    ports:
+      - "9083:9083"
+    depends_on:
+      - hive-metastore-postgresql
+      - namenode
+      - datanode
+
+  hive-server:
+    image: bde2020/hive:2.3.2-postgresql-metastore
+    container_name: campus-hive-server
+    restart: unless-stopped
+    env_file:
+      - hadoop.env
+    environment:
+      - HIVE_CORE_CONF_javax_jdo_option_ConnectionURL=jdbc:postgresql://hive-metastore-postgresql/metastore
+      - SERVICE_PRECONDITION=hive-metastore:9083
+    volumes:
+      - ./hive-site.xml:/opt/hive/conf/hive-site.xml:ro
+      - ../hive:/workspace/hive:ro
+      - ../results:/workspace/results
+    ports:
+      - "10000:10000"
+    depends_on:
+      - hive-metastore
+
+volumes:
+  namenode:
+  datanode:

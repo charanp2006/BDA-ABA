@@ -1,0 +1,81 @@
+subject_code,subject_name,total_classes,present_count,attendance_pct
+IS302,Computer Organization,192,161,83.85
+IS503,Big Data Analytics,192,161,83.85
+CS604,Cryptography,192,158,82.29
+EC501,Digital Signal Processing,192,158,82.29
+EE403,Electric Drives,192,158,82.29
+EC403,Microcontrollers,192,157,81.77
+ME602,Mechatronics,192,155,80.73
+IS502,Data Mining,192,154,80.21
+IS602,Cloud Computing,192,154,80.21
+ME404,Metrology,192,154,80.21
+EE502,Smart Grid,192,153,79.69
+EE602,FACTS Devices,192,153,79.69
+IS401,Database Management Systems,192,152,79.17
+CS302,Digital Logic,192,151,78.65
+CS402,Operating Systems,192,151,78.65
+CS503,Machine Learning,192,151,78.65
+EC404,Control Systems,192,151,78.65
+IS504,Information Security,192,151,78.65
+EC302,Digital Electronics,192,150,78.13
+CS401,Database Management Systems,192,148,77.08
+CS501,Software Engineering,192,148,77.08
+ME304,Manufacturing Processes,192,148,77.08
+CS603,Big Data Analytics,192,147,76.56
+EE402,Electrical Measurements,192,147,76.56
+EE501,Renewable Energy Systems,192,147,76.56
+IS303,Java Programming,192,147,76.56
+CS301,Data Structures,192,146,76.04
+CS303,OOP with Java,192,146,76.04
+CS504,Computer Graphics,192,146,76.04
+EC502,VLSI Design,192,146,76.04
+EC504,Antenna Theory,192,146,76.04
+EE604,Electric Vehicles,192,146,76.04
+IS301,Data Structures,192,146,76.04
+IS403,Computer Networks,192,146,76.04
+CS601,Compiler Design,192,145,75.52
+EC602,Optical Communication,192,145,75.52
+ME502,Automobile Engineering,192,145,75.52
+EE601,HVDC Transmission,192,144,75.00
+IS402,Operating Systems,192,144,75.00
+ME603,Finite Element Analysis,192,144,75.00
+EC601,Wireless Communication,192,143,74.48
+EE401,Power Electronics,192,143,74.48
+CS502,Web Technologies,192,142,73.96
+EC503,Embedded Systems,192,142,73.96
+EE503,High Voltage Engineering,192,142,73.96
+CS602,Cloud Computing,192,141,73.44
+EC401,Analog Circuits,192,141,73.44
+IS501,Software Engineering,192,141,73.44
+ME601,Robotics,192,141,73.44
+EC603,Satellite Communication,192,140,72.92
+EE304,Circuit Theory,192,140,72.92
+EE504,Power System Protection,192,140,72.92
+ME301,Thermodynamics,192,140,72.92
+ME302,Fluid Mechanics,192,140,72.92
+ME401,Heat Transfer,192,140,72.92
+CS404,Design and Analysis of Algorithms,192,139,72.40
+EC303,Network Theory,192,139,72.40
+EE302,Power Systems,192,139,72.40
+EE603,Energy Management,192,139,72.40
+CS403,Computer Networks,192,138,71.88
+EC301,Signals and Systems,192,138,71.88
+EC304,Electronic Devices,192,138,71.88
+EE301,Electrical Machines,192,138,71.88
+IS304,Probability and Statistics,192,138,71.88
+ME303,Strength of Materials,192,138,71.88
+ME501,Refrigeration and Air Conditioning,192,137,71.35
+ME504,Industrial Engineering,192,137,71.35
+EC402,Communication Systems,192,136,70.83
+IS404,Operations Research,192,136,70.83
+ME503,CAD/CAM,192,136,70.83
+ME604,Additive Manufacturing,192,136,70.83
+EE303,Control Systems,192,135,70.31
+IS604,Data Visualization,192,135,70.31
+IS603,Internet of Things,192,134,69.79
+CS304,Discrete Mathematics,192,133,69.27
+EC604,Robotics,192,133,69.27
+EE404,Transmission Lines,192,133,69.27
+ME402,Machine Design,192,133,69.27
+IS601,Compiler Design,192,129,67.19
+ME403,IC Engines,192,129,67.19
