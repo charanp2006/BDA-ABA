@@ -1,0 +1,5 @@
+student_id,department,semester,section,subject_code,subject_name,attendance_date,period_number,status
+4VV23EE025,EEE,4,A,EE402,Electrical Measurements,2025-09-01,1,ABSENT
+4VV23EE026,EEE,4,A,EE402,Electrical Measurements,2025-09-01,1,PRESENT
+4VV23EE027,EEE,4,A,EE402,Electrical Measurements,2025-09-01,1,PRESENT
+4VV23EE028,EEE,4,A,EE402,Electrical Measurements,2025-09-01,1,PRESENT

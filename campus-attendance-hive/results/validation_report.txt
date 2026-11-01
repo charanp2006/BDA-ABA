@@ -1,0 +1,28 @@
+Campus Attendance Dataset Validation
+====================================
+File: C:\Charan\ABA\BDA-ABA\campus-attendance-hive\data\attendance.csv
+Rows: 15,360
+Unique students: 480
+Unique subject offerings: 80
+Status counts: PRESENT=11,512, ABSENT=3,848
+Overall attendance: 74.95%
+Low-attendance student-subject groups (<75%): 650
+
+Checks:
+  [PASS] CSV header matches expected schema (header=['student_id', 'department', 'semester', 'section', 'subject_code', 'subject_name', 'attendance_date', 'period_number', 'status'])
+  [PASS] Row count within 5,000-20,000 target (rows=15,360)
+  [PASS] All rows have exactly 9 fields (malformed_rows=0)
+  [PASS] No missing values (missing_cells=0)
+  [PASS] Status domain is PRESENT/ABSENT only (invalid={})
+  [PASS] All dates are valid YYYY-MM-DD (invalid_dates=0)
+  [PASS] All dates inside 2025-09-01..2025-12-31 (out_of_range=0)
+  [PASS] Semester values are integers in 1..8 (invalid=0)
+  [PASS] Period values are integers in 1..8 (invalid=0)
+  [PASS] No duplicate (student, subject, date, period) keys (duplicates=0)
+  [PASS] At least 100 unique students (students=480)
+  [PASS] At least 20 unique subject offerings (subjects=80)
+  [PASS] Overall attendance percentage between 60 and 95 (pct=74.95%)
+  [PASS] Student attendance percentages within 0..100 (min=40.62% max=100.00%)
+  [PASS] Dataset contains low-attendance student-subject groups (<75%) (low_groups=650)
+
+RESULT: PASS

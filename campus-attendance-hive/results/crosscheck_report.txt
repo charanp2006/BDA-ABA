@@ -1,0 +1,26 @@
+Campus Attendance: Independent Hive Result Cross-Check
+======================================================
+Dataset: C:\Charan\ABA\BDA-ABA\campus-attendance-hive\data\attendance.csv
+Dataset rows: 15,360
+
+Independent Python figures (recomputed from the same CSV):
+  Overall: 11,512/15,360 = 74.95%
+  Subject offerings: 80
+  Students: 480
+  Departments: 5
+  Department-semester-sections: 40
+  Class dates: 65
+  ISO weeks: 13
+  Low-attendance student-subject groups (<75%): 650
+
+Comparison with actual Hive output:
+[PASS] overall: hive=11512/15360 (74.95%), python=11512/15360 (74.95%)
+[PASS] subject_wise: hive_rows=80, python_groups=80, missing=0, extra=0, count_mismatch=0, max_pct_diff=0.0100
+[PASS] student_wise: hive_rows=480, python_groups=480, missing=0, extra=0, count_mismatch=0, max_pct_diff=0.0100
+[PASS] department_wise: hive_rows=5, python_groups=5, missing=0, extra=0, count_mismatch=0, max_pct_diff=0.0000
+[PASS] section_wise: hive_rows=40, python_groups=40, missing=0, extra=0, count_mismatch=0, max_pct_diff=0.0000
+[PASS] daily_trend: hive_rows=65, python_groups=65, missing=0, extra=0, count_mismatch=0, max_pct_diff=0.0100
+[PASS] weekly_trend: hive_rows=13, python_groups=13, missing=0, extra=0, count_mismatch=0, max_pct_diff=0.0000
+[PASS] low_attendance: hive_rows=650, python_groups=650, missing=0, extra=0, count_mismatch=0, max_pct_diff=0.0000
+
+RESULT: PASS
